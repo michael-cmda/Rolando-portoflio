@@ -35,7 +35,7 @@ const projects = [
     technologies: ["Flutter", "Agriculture Tech", "Business Management", "Mobile", "Clean UI", "Sustainability"],
   },
   {
-    title: "My Client - Customer Management System",
+    title: "Linda - Customer Management System",
     description:
       "Professional client management application with contact organization, occupation tracking, and rating system. Features intuitive search functionality and streamlined client interaction workflows.",
     images: ["/images/my-client-app.jpeg"],
