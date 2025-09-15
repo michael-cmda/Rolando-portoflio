@@ -45,7 +45,7 @@ export function Contact() {
                     href="tel:+639515199546"
                     className="text-muted-foreground hover:text-accent transition-colors text-sm"
                   >
-                    <PH></PH> 0951 519 9546
+                    PH 0951 519 9546
                   </a>
                 </div>
               </div>
@@ -56,7 +56,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground mb-2">Location</p>
-                  <p className="text-muted-foreground text-sm">Lizada Toril DC, Philippines</p>
+                  <p className="text-muted-foreground text-sm">Lizada Toril Davao City, Philippines</p>
                 </div>
               </div>
             </div>
