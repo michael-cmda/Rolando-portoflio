@@ -63,27 +63,32 @@ export function Contact() {
 
             {/* Social Links */}
             <div className="flex gap-4 justify-center">
-              <Button
-                size="icon"
-                variant="outline"
-                className="border-accent/30 text-accent hover:bg-accent/10 bg-transparent"
+              <a
+                href="https://github.com/rolando3230"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                className="border-accent/30 text-accent hover:bg-accent/10 bg-transparent"
+                <Button
+                  size="icon"
+                  variant="outline"
+                  className="border-accent/30 text-accent hover:bg-accent/10 bg-transparent"
+                >
+                  <Github className="h-5 w-5" />
+                </Button>
+              </a>
+              <a
+                href="https://ph.linkedin.com/in/rolando-mondilla-jr-62a210334"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                className="border-accent/30 text-accent hover:bg-accent/10 bg-transparent"
-              >
-                <Mail className="h-5 w-5" />
-              </Button>
+                <Button
+                  size="icon"
+                  variant="outline"
+                  className="border-accent/30 text-accent hover:bg-accent/10 bg-transparent"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
