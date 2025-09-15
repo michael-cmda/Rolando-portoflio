@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Rolando Mondilla Jr. - Full-Stack Developer",
   description:
     "Professional portfolio of Rolando Mondilla Jr., a seasoned full-stack developer specializing in mobile, desktop, and web applications.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
