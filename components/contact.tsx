@@ -45,7 +45,7 @@ export function Contact() {
                     href="tel:+639515199546"
                     className="text-muted-foreground hover:text-accent transition-colors text-sm"
                   >
-                    +63 0951 519 9546
+                    <PH></PH> 0951 519 9546
                   </a>
                 </div>
               </div>
