@@ -1,0 +1,311 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens for Sandstorm + Stonework + Black theme */
+  --background: #0d0d0d; /* Deep Black */
+  --foreground: #c2b280; /* Sandstorm Beige */
+  --card: #1a1a1a; /* Slightly lighter black for cards */
+  --card-foreground: #c2b280; /* Sandstorm Beige */
+  --popover: #1a1a1a; /* Slightly lighter black */
+  --popover-foreground: #c2b280; /* Sandstorm Beige */
+  --primary: #c2b280; /* Sandstorm Beige */
+  --primary-foreground: #0d0d0d; /* Deep Black */
+  --secondary: #7d7d7d; /* Stone Gray */
+  --secondary-foreground: #c2b280; /* Sandstorm Beige */
+  --muted: #2a2a2a; /* Muted dark */
+  --muted-foreground: #7d7d7d; /* Stone Gray */
+  --accent: #d4a017; /* Burnt Gold */
+  --accent-foreground: #0d0d0d; /* Deep Black */
+  --destructive: #dc2626; /* Red for errors */
+  --destructive-foreground: #ffffff; /* White text */
+  --border: #7d7d7d; /* Stone Gray */
+  --input: #1a1a1a; /* Slightly lighter black */
+  --ring: #d4a017; /* Burnt Gold for focus rings */
+  --chart-1: #d4a017; /* Burnt Gold */
+  --chart-2: #c2b280; /* Sandstorm Beige */
+  --chart-3: #7d7d7d; /* Stone Gray */
+  --chart-4: #0d0d0d; /* Deep Black */
+  --chart-5: #ffffff; /* White for contrast */
+  --radius: 0.5rem;
+  --sidebar: #0d0d0d; /* Deep Black */
+  --sidebar-foreground: #c2b280; /* Sandstorm Beige */
+  --sidebar-primary: #7d7d7d; /* Stone Gray */
+  --sidebar-primary-foreground: #c2b280; /* Sandstorm Beige */
+  --sidebar-accent: #d4a017; /* Burnt Gold */
+  --sidebar-accent-foreground: #0d0d0d; /* Deep Black */
+  --sidebar-border: #7d7d7d; /* Stone Gray */
+  --sidebar-ring: #d4a017; /* Burnt Gold */
+}
+
+.dark {
+  --background: #0d0d0d;
+  --foreground: #c2b280;
+  --card: #1a1a1a;
+  --card-foreground: #c2b280;
+  --popover: #1a1a1a;
+  --popover-foreground: #c2b280;
+  --primary: #c2b280;
+  --primary-foreground: #0d0d0d;
+  --secondary: #7d7d7d;
+  --secondary-foreground: #c2b280;
+  --muted: #2a2a2a;
+  --muted-foreground: #7d7d7d;
+  --accent: #d4a017;
+  --accent-foreground: #0d0d0d;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #7d7d7d;
+  --input: #1a1a1a;
+  --ring: #d4a017;
+  --chart-1: #d4a017;
+  --chart-2: #c2b280;
+  --chart-3: #7d7d7d;
+  --chart-4: #0d0d0d;
+  --chart-5: #ffffff;
+  --sidebar: #0d0d0d;
+  --sidebar-foreground: #c2b280;
+  --sidebar-primary: #7d7d7d;
+  --sidebar-primary-foreground: #c2b280;
+  --sidebar-accent: #d4a017;
+  --sidebar-accent-foreground: #0d0d0d;
+  --sidebar-border: #7d7d7d;
+  --sidebar-ring: #d4a017;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced stone texture and animation styles */
+.stone-texture {
+  background-image: radial-gradient(circle at 20% 50%, rgba(125, 125, 125, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(194, 178, 128, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(125, 125, 125, 0.08) 0%, transparent 50%);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(212, 160, 23, 0.3);
+}
+
+.glow-accent:hover {
+  box-shadow: 0 0 30px rgba(212, 160, 23, 0.5);
+}
+
+/* Enhanced animations with more variety */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Added smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Parallax effect for background elements */
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Added scroll reveal animation styles */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced scroll animations with stagger effects */
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
